@@ -13,6 +13,13 @@ $(document).keydown(function () {
     }
 });
 
+$(document).click(function () {
+    if(gameStart === true) {
+        setTimeout(nextSequence, 300);
+        gameStart = false;
+    }
+});
+
 function handleClick(e) {
     var userChosenColor = e.id;
     userClickPattern.push(userChosenColor);
